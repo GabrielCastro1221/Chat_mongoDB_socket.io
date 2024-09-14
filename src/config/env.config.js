@@ -7,7 +7,7 @@ dotenv.config({ path: mode === "dev" ? "./.env.dev" : "./.env.build" });
 const configObject = {
   server: {
     mongo_url: process.env.MONGO_URL,
-    port: process.env.PORT || 4000,
+    port: process.env.PORT || 5000,
   },
   auth: {
     jwt_secret: process.env.JWT_SECRET,
