@@ -70,14 +70,6 @@ class AuthController {
     }
   }
 
-  async profile(req, res) {
-    try {
-      res.render("profile");
-    } catch (error) {
-      res.redirect("/404-not-found");
-    }
-  }
-
   async logout(req, res) {
     try {
       res.clearCookie(configObject.auth.cookie_token);

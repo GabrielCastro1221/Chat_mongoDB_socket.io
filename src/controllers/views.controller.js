@@ -1,3 +1,4 @@
+
 class ViewsManager {
   async home(req, res) {
     try {

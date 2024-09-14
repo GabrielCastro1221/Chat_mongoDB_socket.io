@@ -21,17 +21,17 @@ class UserController {
     try {
       const user = await userModel.findById(req.params.uid);
       if (!user) {
-        res
+        return res
           .status(404)
-          .json({ status: false, message: "usuario no encontrado" });
+          .json({ status: false, message: "Usuario no encontrado" });
       }
-      res.status(200).json({ status: true, user: user });
+  
+      res.render('home', { user }); // Aquí pasamos el objeto user a la vista 'chat'
     } catch (err) {
-      res
-        .status(500)
-        .json({ status: false, message: "Error al obtener el usuario" });
+      res.status(500).json({ status: false, message: "Error al obtener el usuario" });
     }
   };
+  
 
   updateUser = async (req, res) => {
     try {

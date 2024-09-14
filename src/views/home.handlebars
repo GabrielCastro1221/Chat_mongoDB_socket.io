@@ -1,15 +1,13 @@
 <section class="container chat-wrapper">
   <div id="chat-container">
     <div id="chat-header">
-      <h6 class="nombreusuario">{{user.name}}
+      <h6 class="nombreusuario">
         <span class="text-success fs-6 fw-bold">Online</span></h6>
     </div>
     <div id="chat-messages">
       <div class="message sender">
-        <div class="user-info">
-          <div class="sender-name">Conectado</div>
-        </div>
-        <div id="chat">Bienvenido al Chat de la comunidad</div>
+        <div class="sender-name" id="chat">Bienvenido al Chat de la
+          comunidad...Escribe algo para empezar</div>
       </div>
     </div>
     <form id="formulario" class="d-grid gap-2">
@@ -19,14 +17,15 @@
         id="mensaje"
         placeholder="Escribe algo..."
       />
-      <button id="sendMessage" class="btn-card-ok"><i
+      <button id="sendMessage" class="btn-card-ok text-light"><i
           class="fas fa-paper-plane"
         ></i>
         Enviar</button>
-      <button id="clearChat" class="btn-card-danger"><i
+      <button id="clearChat" class="btn-card-danger text-light"><i
           class="fas fa-trash"
         ></i>
         Vaciar Chat</button>
+      <a href="/" class="btn btn-outline-danger">Salir</a>
     </form>
   </div>
 </section>

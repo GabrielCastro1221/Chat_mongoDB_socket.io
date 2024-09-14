@@ -1,41 +1,53 @@
-<div class="login-con">
-  <form action="/api/v1/auth/login" method="POST" class="container login-form">
-    <div class="img-wrapper">
-      <img src="https://cdn.vectorstock.com/i/thumb-large/24/34/vintage-sport-skateboarding-label-vector-21012434.jpg"
-        alt="imagen formulario inicio de sesion" class="img-fluid">
-    </div>
+<div class="mt-5">
+  <form
+    action="/api/v1/auth/login"
+    method="POST"
+    class="container border border-secondary rounded p-3"
+  >
     <div>
-      <h1 class="auth-title">Ingresar</h1>
+      <h1 class="text-center fs-4 text-primary fw-5">Ingresar al Chat</h1>
       {{#if incorrectEmail}}
-      <div class="alert alert-danger" role="alert">
-        {{incorrectEmail}}
-      </div>
+        <div class="alert alert-danger" role="alert">
+          {{incorrectEmail}}
+        </div>
       {{/if}}
       {{#if loginError}}
-      <div class="alert alert-danger" role="alert">
-        {{loginError}}
-      </div>
+        <div class="alert alert-danger" role="alert">
+          {{loginError}}
+        </div>
       {{/if}}
-      <div class="form-item-login">
-        <label for="email" class="label-login">Correo electronico</label>
-        <input type="email" name="email" id="email" placeholder="Ingresa tu correo electronico">
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo electronico</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          placeholder="Ingresa tu correo electronico"
+        />
       </div>
       {{#if incorrectPassword}}
-      <div class="alert alert-danger" role="alert">
-        {{incorrectPassword}}
-      </div>
+        <div class="alert alert-danger" role="alert">
+          {{incorrectPassword}}
+        </div>
       {{/if}}
-      <div class="form-item-login">
-        <label for="password" class="label-login">Contraseña</label>
-        <input type="password" name="password" id="password" placeholder="ingresa tu contraseña">
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input
+          type="password"
+          name="password"
+          class="form-control"
+          id="password"
+          placeholder="ingresa tu contraseña"
+        />
       </div>
-      <button type="submit" class="btn-ok">Ingresar</button>
-      <div class="account">
+      <button
+        type="submit"
+        class="btn btn-outline-primary w-100"
+      >Ingresar</button>
+      <div class="d-flex align-items-center justify-content-around mt-3">
         <p>No tenes cuenta?
-          <a href="/register">Registrate</a>
-        </p>
-        <p>Olvidaste tu contraseña?
-          <a href="/reset-password">Restablecer contraseña</a>
+          <a href="/signup">Registrate</a>
         </p>
       </div>
     </div>

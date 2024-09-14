@@ -1,33 +1,70 @@
-<div class="register-con">
-  <form action="/api/v1/auth/register" method="POST" class="container register-form">
-    <h1 class="auth-title">Crear Cuenta</h1>
+<div class="mt-5">
+  <form
+    action="/api/v1/auth/register"
+    method="POST"
+    class="container border border-secondary rounded p-3"
+  >
+    <h1 class="text-center fs-4 text-primary fw-5">Crear Cuenta</h1>
     {{#if userRegisterError}}
-    <div class="alert alert-danger" role="alert">
-      {{userRegisterError}}
-    </div>
+      <div class="alert alert-danger" role="alert">
+        {{userRegisterError}}
+      </div>
     {{/if}}
     {{#if RegisterError}}
-    <div class="alert alert-danger" role="alert">
-      {{RegisterError}}
-    </div>
+      <div class="alert alert-danger" role="alert">
+        {{RegisterError}}
+      </div>
     {{/if}}
-    <div class="form-item-register">
-      <input type="text" name="first_name" id="first_name" placeholder="Ingresa tu nombre">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="first_name"
+        id="first_name"
+        placeholder="Ingresa tu nombre"
+      />
     </div>
-    <div class="form-item-register">
-      <input type="text" name="last_name" id="last_name" placeholder="Ingresa tu apellido">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="last_name"
+        id="last_name"
+        placeholder="Ingresa tu apellido"
+      />
     </div>
-    <div class="form-item-register">
-      <input type="number" name="age" id="age" placeholder="Ingresa tu edad">
+    <div class="mb-3">
+      <input
+        type="number"
+        class="form-control"
+        name="age"
+        id="age"
+        placeholder="Ingresa tu edad"
+      />
     </div>
-    <div class="form-item-register">
-      <input type="email" name="email" id="email" placeholder="Ingresa tu correo electronico">
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        id="email"
+        placeholder="Ingresa tu correo electronico"
+      />
     </div>
-    <div class="form-item-register">
-      <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña">
+    <div class="mb-3">
+      <input
+        type="password"
+        class="form-control"
+        name="password"
+        id="password"
+        placeholder="Ingresa tu contraseña"
+      />
     </div>
-    <button type="submit" class="btn-ok">Registrase</button>
-    <div class="account">
+    <button
+      type="submit"
+      class="btn btn-outline-primary w-100 mt-3"
+    >Registrase</button>
+    <div class="d-flex align-items-center justify-content-around mt-3">
       <p>Ya tenes cuenta?
         <a href="/">Ingresa</a>
       </p>
